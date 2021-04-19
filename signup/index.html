@@ -36,11 +36,16 @@
         border-radius: 15px;
         padding: 25px;
         margin-top: 3vh;
+        margin-bottom: 3vh;
     }
     .btn-custom{
       background-color: #212C3A;
       color: white;
     }
+    .btn-custom:hover{
+      color: lightgrey;
+    }
+
     </style>
 </head>
 
@@ -89,7 +94,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="dnsModalLabel">Configure DNS</h5>
+        <h5 class="modal-title" id="dnsModalLabel">Successfully Submitted - Configure DNS</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#dnsModal').modal('hide')"></button>
       </div>
       <div class="modal-body">
@@ -140,7 +145,7 @@
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString()
         }).then(() => {console.log('Form successfully submitted'); 
-        $('#dnsModal').modal('show');}).catch((error) =>
+        $('#dnsModal').modal('show'); myForm.reset()}).catch((error) =>
           alert(error))
       }
 
