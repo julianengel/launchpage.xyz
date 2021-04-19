@@ -54,7 +54,6 @@
         <div class="row justify-content-center">
             <div class="col-11 col-md-4 middle">
                 <form id="new_launchpage" netlify-honeypot="bot-field" netlify>
-                    <input type="hidden" name="url" value="" id='urlField'>
                     <p class="d-none">
                         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                     </p>
@@ -73,7 +72,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="url" class="form-label">Domain</label>
-                        <input type="url" class="form-control" id="domain" name="domain" required>
+                        <input type="url" class="form-control" id="domain" name="domain" value="https://" required>
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="wwwEnable" name="wwwEnable">
@@ -81,7 +80,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="about" class="form-label">What will your website be about?</label>
-                        <textarea class="form-control" id="about" rows="3"></textarea name="about" required>
+                        <textarea class="form-control" id="about" rows="3" name="about" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-custom">Request</button>
                 </form>
