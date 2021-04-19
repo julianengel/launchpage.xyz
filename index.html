@@ -22,6 +22,9 @@
         justify-content: center;
     }
 
+    .hidden {
+        display: none;
+    }
 
     .responsive {
         width: 100%;
@@ -87,19 +90,22 @@
 </head>
 
 <body>
-        <img src="img/launch.svg" class="responsive w-80">
-        <h1 class="title">Launching Soon</h1>
-        <form class="email" id='form' netlify>
-            <input type="hidden" name="url" value="" id='urlField'>
-            <div class="emailinput">
-                <input type="email" name="email" placeholder="Email me when it's ready">
-                <button type="submit"><img class="responsive center" src="img/plane.svg"></button>
-            </div>
-        </form>
-        <script type="text/javascript">
-            let urlField = document.getElementById('urlField')
-            urlField.value = window.location.href
-        </script>
+    <img src="img/launch.svg" class="responsive w-80">
+    <h1 class="title">Launching Soon</h1>
+    <form class="email" id='form' netlify-honeypot="bot-field" netlify>
+        <input type="hidden" name="url" value="" id='urlField'>
+        <p class="hidden">
+            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+        </p>
+        <div class="emailinput">
+            <input type="email" name="email" placeholder="Email me when it's ready" required="">
+            <button type="submit"><img class="responsive center" src="img/plane.svg"></button>
+        </div>
+    </form>
+    <script type="text/javascript">
+    let urlField = document.getElementById('urlField')
+    urlField.value = window.location.href
+    </script>
 </body>
 
 </html>
