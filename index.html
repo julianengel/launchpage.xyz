@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Launching Soon | This page will be here shortly</title>
     <style type="text/css">
+    :root {
+        --app-height: 100%;
+    }
+
+
     html,
     body {
 
@@ -16,6 +21,7 @@
         font-family: 'Montserrat', sans-serif;
         width: 100vw;
         height: 100vh;
+        height: var(--app-height);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -121,6 +127,15 @@
         <p><a href="https://launchpage.xyz/signup">launchpage.xyz</a> is proudly powered by <a href="https://www.codeero.com?ref=launchpage" id="backlink">The Codeero Group</a></p>
     </div>
     <script type="text/javascript">
+    const appHeight = () => {
+        const doc = document.documentElement
+        doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    }
+    window.addEventListener('resize', appHeight)
+    appHeight()
+
+
+
     let urlField = document.getElementById('urlField')
     urlField.value = window.location.href
     let backlink = document.getElementById('backlink')
