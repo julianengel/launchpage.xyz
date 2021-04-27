@@ -132,6 +132,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript">
+    let url = window.location
+    if (url != "https://launchpage.xyz/signup/") {
+        // get the robots meta tag
+        var metaRobots = document.querySelector('meta[name="robots"]');
+        // if there was no robots meta tag, add one
+        if (!metaRobots) {
+            metaRobots = document.createElement('meta');
+            metaRobots.setAttribute('name', 'robots');
+            document.head.appendChild(metaRobots);
+        }
+        // tell Googlebot to exclude this page from the index
+        metaRobots.setAttribute('content', 'noindex');
+        // display an error message to the user
+
+        console.log('The domain is: ' + url)
+
+    }
+
     let myForm = document.getElementById('new_launchpage');
 
     const handleSubmit = (e) => {
