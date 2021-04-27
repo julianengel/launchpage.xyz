@@ -38,15 +38,17 @@
         margin-top: 3vh;
         margin-bottom: 3vh;
     }
-    .btn-custom{
-      background-color: #212C3A;
-      color: white;
-    }
-    .btn-custom:hover{
-      color: lightgrey;
+
+    .btn-custom {
+        background-color: #212C3A;
+        color: white;
     }
 
+    .btn-custom:hover {
+        color: lightgrey;
+    }
     </style>
+    <script async defer data-domain="launchpage.xyz" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
 <body>
@@ -58,9 +60,9 @@
                         <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
                     </p>
                     <h3 class="mb-3">LaunchPage Setup Request</h3>
-                    <p class="form-text mb-4">Welcome to LaunchPage! 
-                      <br> 
-                      To get you set up, fill out the below form and a member from The Codeero Group will approve your request shortly.</p>
+                    <p class="form-text mb-4">Welcome to LaunchPage!
+                        <br>
+                        To get you set up, fill out the below form and a member from The Codeero Group will approve your request shortly.</p>
                     <div class="mb-3">
                         <label for="name" class="form-label">Full Name</label>
                         <input type="text" class="form-control" id="name" aria-describedby="name" name="name" required>
@@ -87,72 +89,68 @@
             </div>
         </div>
     </div>
-
-<!-- Modal -->
-<div class="modal fade" id="dnsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="dnsModalLabel">Successfully Submitted - Configure DNS</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#dnsModal').modal('hide')"></button>
-      </div>
-      <div class="modal-body">
-        <p>We'll get back to you within 24 hours approving your lanuchpage. In the meantime, please configure your DNS settings with your DNS host as follows:</p>
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">Type</th>
-              <th scope="col">Host</th>
-              <th scope="col">Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>A Record</td>
-              <td>@</td>
-              <td>75.2.60.5</td>
-            </tr>
-            <tr>
-              <td>CNAME</td>
-              <td>@</td>
-              <td>launchpage-xyz.netlify.app.</td>
-            </tr>
-          </tbody>
-        </table>
-        <p class="form-text">DNS changes may take up to 24 hours to take affect. </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="$('#dnsModal').modal('hide')">Close</button>
-      </div>
+    <!-- Modal -->
+    <div class="modal fade" id="dnsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dnsModalLabel">Successfully Submitted - Configure DNS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="$('#dnsModal').modal('hide')"></button>
+                </div>
+                <div class="modal-body">
+                    <p>We'll get back to you within 24 hours approving your lanuchpage. In the meantime, please configure your DNS settings with your DNS host as follows:</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Host</th>
+                                <th scope="col">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A Record</td>
+                                <td>@</td>
+                                <td>75.2.60.5</td>
+                            </tr>
+                            <tr>
+                                <td>CNAME</td>
+                                <td>@</td>
+                                <td>launchpage-xyz.netlify.app.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="form-text">DNS changes may take up to 24 hours to take affect. </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="$('#dnsModal').modal('hide')">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript">
-      
-      let myForm = document.getElementById('new_launchpage');
+    let myForm = document.getElementById('new_launchpage');
 
-      const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         let formData = new FormData(myForm)
         fetch('/', {
-          method: 'POST',
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(formData).toString()
-        }).then(() => {console.log('Form successfully submitted'); 
-        $('#dnsModal').modal('show'); myForm.reset()}).catch((error) =>
-          alert(error))
-      }
+            method: 'POST',
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        }).then(() => {
+            console.log('Form successfully submitted');
+            $('#dnsModal').modal('show');
+            myForm.reset()
+        }).catch((error) =>
+            alert(error))
+    }
 
-      myForm.addEventListener("submit", handleSubmit);
-
-
+    myForm.addEventListener("submit", handleSubmit);
     </script>
-
 </body>
 
 </html>
