@@ -147,14 +147,16 @@
     <div class="powered-by">
         <p><a href="https://launchpage.xyz/signup">launchpage.xyz</a> is proudly powered by <a href="https://www.codeero.com?ref=launchpage" id="backlink">The Codeero Group</a></p>
     </div>
-    <script type="text/javascript">
+    <script>
     window.plausible = window.plausible || function() {
         (window.plausible.q = window.plausible.q || []).push(arguments)
     }
-    let url = window.location.hostname
-    let canon = "https://www.launchpage.xyz" + '?utm_source=' + url
+    </script>
+    <script type="text/javascript">
+    let url = window.location.hostname;
+    let canon = "https://www.launchpage.xyz" + '?utm_source=' + url;
     plausible('pageview', { u: canon });
-    console.log(canon)
+    console.log(canon);
     const appHeight = () => {
         const doc = document.documentElement
         doc.style.setProperty('--app-height', `${window.innerHeight}px`)
