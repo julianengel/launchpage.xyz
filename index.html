@@ -129,6 +129,16 @@
     }
     </style>
     <script defer data-domain="launchpage.xyz" src="https://analytics.codeero.com/js/plausible.manual.js"></script>
+    <script>
+    window.plausible = window.plausible || function() {
+        (window.plausible.q = window.plausible.q || []).push(arguments)
+    }
+    </script>
+    <script type="text/javascript">
+    let url = window.location.hostname;
+    let canon = window.location.href + '?utm_source=' + url;
+    plausible('pageview', { u: window.location.href + '?utm_source=' + url });
+    </script>
 </head>
 
 <body>
@@ -148,14 +158,6 @@
         <p><a href="https://launchpage.xyz/signup">launchpage.xyz</a> is proudly powered by <a href="https://www.codeero.com?ref=launchpage" id="backlink">The Codeero Group</a></p>
     </div>
     <script>
-    window.plausible = window.plausible || function() {
-        (window.plausible.q = window.plausible.q || []).push(arguments)
-    }
-    </script>
-    <script type="text/javascript">
-    let url = window.location.hostname;
-    let canon = window.location.href + '?utm_source=' + url;
-    plausible('pageview', { u: canon });
     console.log(canon);
     const appHeight = () => {
         const doc = document.documentElement
