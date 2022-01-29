@@ -154,7 +154,7 @@
     </script>
     <script type="text/javascript">
     let url = window.location.hostname;
-    let canon = "https://www.launchpage.xyz" + '?utm_source=' + url;
+    let canon = window.location.href + '?utm_source=' + url;
     plausible('pageview', { u: canon });
     console.log(canon);
     const appHeight = () => {
