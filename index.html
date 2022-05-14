@@ -36,8 +36,14 @@
         justify-content: center;
     }
 
-    .hidden {
-        display: none;
+    .winniethepooh {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 0;
+        width: 0;
+        z-index: -1;
     }
 
     .responsive {
@@ -145,13 +151,12 @@
 <body>
     <img src="img/launch.svg" class="responsive w-80">
     <h1 class="title">Launching Soon</h1>
-    <form class="email" id='form' netlify-honeypot="bot-field" netlify>
-        <input type="hidden" name="url" value="" id='urlField'>
-        <p class="hidden">
-            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+    <form class="email" id='form' onsubmit="submitForm()">
+        <p class="winniethepooh">
+            <label for="message">Don’t fill this out if you can read this: </label><input name="message" id="message" autocomplete="off" />
         </p>
         <div class="emailinput">
-            <input type="email" name="email" placeholder="Email me when it's ready" required="">
+            <input type="email" name="email" placeholder="Email me when it's ready" id="email" required="">
             <button type="submit"><img class="responsive center" src="img/plane.svg"></button>
         </div>
     </form>
@@ -159,18 +164,12 @@
         <p><a href="https://launchpage.xyz/signup">launchpage.xyz</a> is proudly powered by <a href="https://www.codeero.com?ref=launchpage" id="backlink">The Codeero Group</a></p>
     </div>
     <script>
-    console.log(canon);
     const appHeight = () => {
         const doc = document.documentElement
         doc.style.setProperty('--app-height', `${window.innerHeight}px`)
     }
     window.addEventListener('resize', appHeight)
     appHeight()
-
-
-
-    let urlField = document.getElementById('urlField')
-    urlField.value = window.location.href
     let backlink = document.getElementById('backlink')
     backlink.href = backlink.href + '&utm_campaign=' + window.location.href
     </script>
